@@ -1,0 +1,466 @@
+[
+  {
+    "hexCode": "660000",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "990000",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "CC0000",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF0000",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF3333",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF6666",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF9999",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FFCCCC",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "660033",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "99004C",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "CC0066",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF007F",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF3399",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF66B2",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FF99CC",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "FFCCE5",
+    "colorGroup": 2
+  },
+  {
+    "hexCode": "663300",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "994C00",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "CC6600",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "FF8000",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "FF9933",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "FFB266",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "FFCC99",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "FFE5CC",
+    "colorGroup": 5
+  },
+  {
+    "hexCode": "666600",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "999900",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "CCCC00",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "FFFF00",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "FFFF33",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "FFFF66",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "FFFF99",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "FFFFCC",
+    "colorGroup": 1
+  },
+  {
+    "hexCode": "80FF00",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "99FF33",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "B2FF66",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "B2FF66",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "E5FFCC",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "006600",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "009900",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "00CC00",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "00FF00",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "33FF33",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "66FF66",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "99FF99",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "CCFFCC",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "006633",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "00994C",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "00CC66",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "00FF80",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "33FF99",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "66FFB2",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "99FFCC",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "CCFFE5",
+    "colorGroup": 4
+  },
+  {
+    "hexCode": "006666",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "009999",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "00CCCC",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "00FFFF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "33FFFF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "66FFFF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "99FFFF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "CCFFFF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "003366",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "004C99",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "0066CC",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "0080FF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "3399FF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "66B2FF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "99CCFF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "CCE5FF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "000066",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "000099",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "0000CC",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "0000FF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "3333FF",
+    "colorGroup": 3
+  },
+  {
+    "hexCode": "6666FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "9999FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "CCCCFF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "330066",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "4C0099",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "6600CC",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "7F00FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "9933FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "B266FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "CC99FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "E5CCFF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "660066",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "990099",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "CC00CC",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "FF00FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "FF33FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "FF66FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "FF99FF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "FFCCFF",
+    "colorGroup": 7
+  },
+  {
+    "hexCode": "800000",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "A52A2A",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "A0522D",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "8B4513",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "D2691E",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "CD853F",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "DAA520",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "F4A460",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "BC8F8F",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "D2B48C",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "DEB887",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "F5DEB3",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "FFDEAD",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "FFE4C4",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "FFEBCD",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "FFF8DC",
+    "colorGroup": 8
+  },
+  {
+    "hexCode": "202020",
+    "colorGroup": 6
+  },
+  {
+    "hexCode": "404040",
+    "colorGroup": 6
+  },
+  {
+    "hexCode": "606060",
+    "colorGroup": 6
+  },
+  {
+    "hexCode": "808080",
+    "colorGroup": 6
+  },
+  {
+    "hexCode": "A0A0A0",
+    "colorGroup": 6
+  },
+  {
+    "hexCode": "C0C0C0",
+    "colorGroup": 6
+  },
+  {
+    "hexCode": "E0E0E0",
+    "colorGroup": 6
+  }
+]

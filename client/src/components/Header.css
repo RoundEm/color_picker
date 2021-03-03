@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    background: var(--dark-gray);
+    padding: 20px 30px;
+}
+
+input {
+    width: 35%;
+}
+
+/* This hides the label but still makes it available for screen readers by presenting the label in a 1-by-1 pixel area with a 1-pixel margin */
+.hidden_label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+/* TODO: make transitions smoother? */
+
+@media screen and (max-width: 993px) {
+    input {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    header {
+        font-size: 1em;
+    }
+
+    input {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    input {
+        width: 70%;
+    }
+}

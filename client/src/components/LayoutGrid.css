@@ -1,0 +1,12 @@
+#layout_grid_container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+@media screen and (max-width: 680px) {
+    #layout_grid_container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr;
+    }
+}
