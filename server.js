@@ -20,7 +20,7 @@ app.get('/color_groups', (req, res) => {
     const queryString = `SELECT * FROM color_groups`
     pool.query(queryString)
         .then(_res => {
-            console.log('color groups res: ', _res)
+            // console.log('color groups res: ', _res)
             res.json(_res.rows)
         })
         .catch(err => {
@@ -31,12 +31,14 @@ app.get('/color_groups', (req, res) => {
 // return colors by color group
 app.get('/color_group/:id', (req, res) => {
     const queryString = `
-        SELECT * FROM color_groups
-        WHERE id = $1
+        SELECT c.id, c.hex_code, cg.name FROM colors as c
+        JOIN color_groups as cg
+        ON c.color_group_id = cg.id
+        WHERE cg.name = $1;
     `
     pool.query(queryString, [req.params.id])
         .then(_res => {
-            console.log('color_group res: ', _res)
+            // console.log('color_group res: ', _res)
             res.json(_res.rows)
         })
         .catch(err => {

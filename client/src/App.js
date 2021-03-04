@@ -5,7 +5,6 @@ import Router from './components/Router'
 import Header from './components/Header'
 import ContentGrid from './components/LayoutGrid'
 import SidebarNav from './components/SidebarNav'
-import MainContent from './components/MainContent'
 
 const PaginationContext = React.createContext({})
 
@@ -16,14 +15,14 @@ const setPageNumber = () => {}
 function App() {
   // TODO: use fetch instead? Either way change IDs of colors to be same order as mockup (e.g. red, orange, yello, etc.)
   const [colorGroups, setColorGroups] = useState([
-    { name: 'yellow', id: 1 },
-    { name: 'green', id: 2 },
-    { name: 'blue', id: 3 },
+    { name: 'red', id: 1 },
+    { name: 'orange', id: 2 },
+    { name: 'yellow', id: 3 },
     { name: 'green', id: 4 },
-    { name: 'orange', id: 5 },
-    { name: 'gray', id: 6 },
-    { name: 'purple', id: 7 },
-    { name: 'brown', id: 8 },
+    { name: 'blue', id: 5 },
+    { name: 'purple', id: 6 },
+    { name: 'brown', id: 7 },
+    { name: 'gray', id: 8 },
     // 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'gray'
   ])
   const [allColors, setAllColors] = useState([])
@@ -46,7 +45,7 @@ function App() {
   useEffect(() => {
     axios.get('/colors')
       .then((res) => {
-        console.log('get colors res: ', res)
+        // console.log('get colors res: ', res)
         setAllColors(res.data)
         setTotalPages(Math.ceil(res.data.length / itemsPerPage))
       })
@@ -57,14 +56,14 @@ function App() {
 
   return (
     <div>
-      <PaginationContext.Provider value={{
-        // colorGroups,
-        // colors,
-      }}>
+      <PaginationContext.Provider value={{ }}>
         <BrowserRouter>
           <Header />
           <ContentGrid>
-            <SidebarNav colorGroups={colorGroups} />
+            <SidebarNav 
+              allColors={allColors}
+              colorGroups={colorGroups} 
+            />
             <Router 
               allColors={allColors}
             />

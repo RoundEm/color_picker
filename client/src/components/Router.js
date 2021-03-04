@@ -1,19 +1,25 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import MainContent from './MainContent'
+import MainContentAllColors from './MainContentAllColors'
 import MainContentFilteredColors from './MainContentFilteredColors'
+import MainContentFocusedColor from './MainContentFocusedColor'
 
 export default function Router({ allColors }) {
     return (
-        <div>
+        <main>
             <Switch>
-                <Route path='/color/:id'>
+                <Route path='/color_group/:id'>
                     <MainContentFilteredColors />
                 </Route>
+
+                <Route path='/color/:id'>
+                    <MainContentFocusedColor />
+                </Route>
+
                 <Route path='/'>
-                    <MainContent allColors={allColors} />
+                    <MainContentAllColors allColors={allColors} />
                 </Route>
             </Switch>
-        </div>
+        </main>
     )
 }

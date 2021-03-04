@@ -1,22 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './ColorSwatchListCard.css'
 
-export default function ColorSwatchListCard({ colorCode }) {
-    // console.log('colorCode: ', colorCode)
+export default function ColorSwatchListCard({ hexCode, id }) {
     return (
-        <div 
-            className='card'
-            // onClick={}
+        <Link 
+            to={`/color/${hexCode}`}
+            className='card' 
         >
-            <div 
-                className='card_color' 
-                style={{ background: `#${colorCode}` }}
-            >
+            <div>
+                <div 
+                    className='card_color' 
+                    style={{ background: `#${hexCode}` }}
+                >
+                </div>
+                
+                <div className='card_label'>
+                    #{hexCode}
+                </div>
             </div>
-            
-            <div className='card_label'>
-                #{colorCode}
-            </div>
-        </div>
+        </Link>
     )
 }

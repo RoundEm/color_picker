@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 import Logo from '../logo-symbol.svg'
 
@@ -7,8 +8,9 @@ export default function Header() {
     const [searchValue, setSearchValue] = useState('')
     return (
         <header>
-            <img src={Logo} alt='Helpful Human Company Logo' />
-            
+            <Link to='/'>
+                <img src={Logo} alt='Helpful Human Company Logo' />
+            </Link>
                 <label 
                     htmlFor='search' 
                     className='hidden_label'
@@ -22,8 +24,6 @@ export default function Header() {
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
                 />
-            
-            
         </header>
     )
 }
