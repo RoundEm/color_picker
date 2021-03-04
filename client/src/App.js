@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, useLocation } from 'react-router-dom'
 import axios from 'axios'
 import Router from './components/Router'
 import Header from './components/Header'
@@ -7,10 +7,6 @@ import ContentGrid from './components/LayoutGrid'
 import SidebarNav from './components/SidebarNav'
 
 const PaginationContext = React.createContext({})
-
-let currentPage = 0
-const setPageNumber = () => {}
-// console.log('currentPage: ', currentPage)
 
 function App() {
   // TODO: use fetch instead? Either way change IDs of colors to be same order as mockup (e.g. red, orange, yello, etc.)
@@ -23,14 +19,19 @@ function App() {
     { name: 'purple', id: 6 },
     { name: 'brown', id: 7 },
     { name: 'gray', id: 8 },
-    // 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'brown', 'gray'
   ])
   const [allColors, setAllColors] = useState([])
+  const [paginatedColors, setPaginatedColors] = useState([])
   const [totalPages, setTotalPages] = useState(null)
+  const [currentPage, setCurrentPage] = useState(0)
   const itemsPerPage = 16
+  // TODO: should i be using react router here instead of window.location below?
+  // const { pathname } = useLocation()
+  // console.log('pathname: ', pathname)
+  console.log('paginatedColors from App: ', paginatedColors)
   console.log('totalPages: ', totalPages)
 
-  // TODO: I'm just using hard-coded array to set color groups but should I fetch them instead?
+  // TODO: I'm just using hard-coded array to set color groups but should I fetch them instead? If so this should work:
   // useEffect(() => {
   //   axios.get('/color_groups')
   //     .then((res) => {
@@ -45,9 +46,13 @@ function App() {
   useEffect(() => {
     axios.get('/colors')
       .then((res) => {
-        // console.log('get colors res: ', res)
+        console.log('get colors res: ', res)
         setAllColors(res.data)
         setTotalPages(Math.ceil(res.data.length / itemsPerPage))
+        setPaginatedColors(res.data.slice(
+          currentPage, 
+          currentPage + itemsPerPage
+        ))
       })
       .catch((err) => {
         console.log('get colors err: ', err)
@@ -56,7 +61,17 @@ function App() {
 
   return (
     <div>
-      <PaginationContext.Provider value={{ }}>
+      <PaginationContext.Provider value={{ 
+        allColors,
+        paginatedColors,
+        setPaginatedColors,
+        // handleSetPaginatedColors,
+        itemsPerPage,
+        totalPages,
+        setTotalPages,
+        currentPage,
+        setCurrentPage,
+      }}>
         <BrowserRouter>
           <Header />
           <ContentGrid>
@@ -66,6 +81,7 @@ function App() {
             />
             <Router 
               allColors={allColors}
+              totalPages={totalPages}
             />
           </ContentGrid>
 

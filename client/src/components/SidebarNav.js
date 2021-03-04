@@ -17,7 +17,7 @@ export default function SidebarNav({ allColors, colorGroups }) {
                 Random Color
             </button>
 
-            <ul>
+            <ul id='sidebar_ul'>
                 {colorGroups.map(({ id, name }) => {
                     return (
                         <li key={id}>
@@ -30,6 +30,12 @@ export default function SidebarNav({ allColors, colorGroups }) {
                         </li>
                     )
                 })}
+
+                <li>
+                    <Link to='/'>
+                        All Colors
+                    </Link>
+                </li>
             </ul>
         </nav>
     )

@@ -12,9 +12,7 @@ export default function MainContentFocusedColor() {
 
     return (
         <div>
-            <ColorSwatchLargeCard 
-                hexCode={id}
-            />
+            <ColorSwatchLargeCard hexCode={id}/>
 
             <button 
                 className='clear_btn' 

@@ -26,13 +26,11 @@ li {
 @media screen and (max-width: 680px) {
     nav {
         padding-top: 15px;
-        /* TODO: Maybe move font decrease for this and nav above to index.css */
         font-size: 1rem;
     }
 
     button {
         margin-bottom: 0;
-        /* TODO: research this */
         font-size: inherit;
     }
 
@@ -43,7 +41,6 @@ li {
     }
 
     li {
-        /* display: inline-block; */
         margin: 5px;
         padding: 5px;
     }

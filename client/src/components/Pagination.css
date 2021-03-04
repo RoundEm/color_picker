@@ -1,0 +1,16 @@
+div#pagination_container  {
+    width: 100%;
+    margin: 20px 0;
+}
+
+div#pagination_container ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div#pagination_container li {
+    font-size: 1.2rem;
+    margin: 5px;
+    padding: 5px;
+}

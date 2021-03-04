@@ -3,8 +3,14 @@ import { Switch, Route } from 'react-router-dom'
 import MainContentAllColors from './MainContentAllColors'
 import MainContentFilteredColors from './MainContentFilteredColors'
 import MainContentFocusedColor from './MainContentFocusedColor'
+import Pagination from './Pagination'
 
-export default function Router({ allColors }) {
+export default function Router({ 
+    allColors,
+    currentPage,
+    itemsPerPage, 
+    totalPages
+}) {
     return (
         <main>
             <Switch>
@@ -17,7 +23,15 @@ export default function Router({ allColors }) {
                 </Route>
 
                 <Route path='/'>
-                    <MainContentAllColors allColors={allColors} />
+                    <MainContentAllColors 
+                        allColors={allColors} 
+                        currentPage={currentPage}
+                        itemsPerPage={itemsPerPage}
+                    />
+                    
+                    <Pagination 
+                        totalPages={totalPages}
+                    />
                 </Route>
             </Switch>
         </main>
