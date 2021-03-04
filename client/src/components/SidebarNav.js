@@ -1,17 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './SidebarNav.css'
 
-const colorCategories = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Brown', 'Gray']
+// const colorCategories = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', brown', gray']
 
-export default function SidebarNav() {
-    function handleDisplayColorGroup(e) {
-        console.log('e.target.textContent: ', e.target.textContent)
-        // const filteredColors = colors.filter(color => {
-        //     return color.
-        // })
-
-    }
-
+export default function SidebarNav({ colorGroups }) {
     return (
         <nav>
             <button
@@ -20,14 +13,13 @@ export default function SidebarNav() {
                 Random Color
             </button>
             <ul>
-                {colorCategories.map(color => {
+                {colorGroups.map(({ id, name }) => {
+                    console.log('color name: ', id)
                     return (
-                        <li 
-                            id={color}
-                            key={color}
-                            onClick={handleDisplayColorGroup}
-                        >
-                            <a href='#'>{color}</a>
+                        <li key={id}>
+                            <Link to={`/color/${id}`}>
+                                {name[0].toUpperCase() + name.slice(1)}
+                            </Link>
                         </li>
                     )
                 })}

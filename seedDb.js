@@ -15,6 +15,8 @@ fs.readFile('./client/src/data.json', 'utf-8', (err, data) => {
 
 const colorCategories = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Brown', 'Gray']
 
+// TODO: is `returning *` necessary?
+
 function insertColorGroupTableRow(color) {
     const query = `
         insert into color_groups(name)

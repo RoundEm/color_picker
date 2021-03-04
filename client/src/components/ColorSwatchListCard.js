@@ -1,8 +1,8 @@
 import React from 'react'
 import './ColorSwatchListCard.css'
 
-export default function ColorSwatchListCard(props) {
-    console.log('props.colorCode: ', props.colorCode)
+export default function ColorSwatchListCard({ colorCode }) {
+    // console.log('colorCode: ', colorCode)
     return (
         <div 
             className='card'
@@ -10,12 +10,12 @@ export default function ColorSwatchListCard(props) {
         >
             <div 
                 className='card_color' 
-                style={{ background: `#${props.colorCode}` }}
+                style={{ background: `#${colorCode}` }}
             >
             </div>
             
             <div className='card_label'>
-                #{props.colorCode}
+                #{colorCode}
             </div>
         </div>
     )
