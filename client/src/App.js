@@ -28,8 +28,9 @@ function App() {
   // TODO: should i be using react router here instead of window.location below?
   // const { pathname } = useLocation()
   // console.log('pathname: ', pathname)
-  console.log('paginatedColors from App: ', paginatedColors)
-  console.log('totalPages: ', totalPages)
+  // console.log('allColors: ', allColors)
+  // console.log('paginatedColors from App: ', paginatedColors)
+  // console.log('totalPages: ', totalPages)
 
   // TODO: I'm just using hard-coded array to set color groups but should I fetch them instead? If so this should work:
   // useEffect(() => {
@@ -48,16 +49,24 @@ function App() {
       .then((res) => {
         console.log('get colors res: ', res)
         setAllColors(res.data)
-        setTotalPages(Math.ceil(res.data.length / itemsPerPage))
-        setPaginatedColors(res.data.slice(
-          currentPage, 
-          currentPage + itemsPerPage
-        ))
+        // setTotalPages(Math.ceil(res.data.length / itemsPerPage))
+        // setPaginatedColors(res.data.slice(
+        //   currentPage, 
+        //   currentPage + itemsPerPage
+        // ))
       })
       .catch((err) => {
         console.log('get colors err: ', err)
       })
   }, [])
+
+  useEffect(() => {
+    setTotalPages(Math.ceil(allColors.length / itemsPerPage))
+    setPaginatedColors(allColors.slice(
+      currentPage, 
+      currentPage + itemsPerPage
+    ))
+  }, [allColors])
 
   return (
     <div>
@@ -65,7 +74,6 @@ function App() {
         allColors,
         paginatedColors,
         setPaginatedColors,
-        // handleSetPaginatedColors,
         itemsPerPage,
         totalPages,
         setTotalPages,
