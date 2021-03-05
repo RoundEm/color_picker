@@ -3,14 +3,15 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const port = process.env.PORT || 3001
+
 const pool = require('./db')
 
 app.use(bodyParser.json())
-// app.use(
-//   bodyParser.urlencoded({
-//     extended: true,
-//   })
-// )
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'))
 }
@@ -58,7 +59,8 @@ app.get('/colors', (req, res) => {
             res.json(_res.rows)
         })
         .catch(err => {
-            console.log('post err: ', err)
+            console.log('port: ', port)
+            console.log('get colors err: ', err)
         })
 })
 

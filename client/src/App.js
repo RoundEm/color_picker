@@ -9,6 +9,7 @@ import ColorGroupNav from './components/ColorGroupNav'
 const PaginationContext = React.createContext({})
 
 function App() {
+    // TODO: I'm just using hard-coded array to set color groups for nav bar but should I fetch them instead? If so the commented out useEffect code below works but probably needs a loader.
   const [colorGroups, setColorGroups] = useState([
     { name: 'red', id: 1 },
     { name: 'orange', id: 2 },
@@ -25,7 +26,6 @@ function App() {
   const [currentPage, setCurrentPage] = useState(0)
   const itemsPerPage = 16
 
-  // TODO: I'm just using hard-coded array to set color groups but should I fetch them instead? If so this should work:
   // useEffect(() => {
   //   axios.get('/color_groups')
   //     .then((res) => {
@@ -40,9 +40,9 @@ function App() {
   useEffect(() => {
     axios.get('/colors')
       .then((res) => {
-        console.log('get colors res: ', res)
         setAllColors(res.data)
-        // TODO: remove and figure out what was going awry here
+
+        // TODO: figure out what was going awry here and then remove 
         // setTotalPages(Math.ceil(res.data.length / itemsPerPage))
         // setPaginatedColors(res.data.slice(
         //   currentPage, 
