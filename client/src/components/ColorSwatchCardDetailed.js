@@ -1,12 +1,12 @@
 import React from 'react'
-import './ColorSwatchLargeCard.css'
+import './ColorSwatchCard.css'
 
 // TODO: add button that allows the hex code to be copied to clipboard
-export default function ColorSwatchLargeCard({ hexCode }) {
+export default function ColorSwatchCardDetailed({ hexCode }) {
     return (
-        <div className='card_large'>
+        <div className='card'>
             <div 
-                className='card_color_large' 
+                className='card_color card_color-large' 
                 style={{ background: `#${hexCode}` }}
             >
             </div>

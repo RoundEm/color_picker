@@ -15,7 +15,7 @@ export default function Router({
         <main>
             <Switch>
                 <Route path='/color_group/:id'>
-                    <MainContentFilteredColors />
+                    <MainContentFilteredColors allColors={allColors} />
                 </Route>
 
                 <Route path='/color/:id'>

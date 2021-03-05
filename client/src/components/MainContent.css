@@ -2,6 +2,12 @@ main {
     padding: 75px 30px;
 }
 
+button.clear_btn {
+    width: 50%;
+    margin: 40px auto;
+    display: block;
+}
+
 @media screen and (max-width: 680px) {
     main {
         padding: 15px;

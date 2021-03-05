@@ -1,18 +1,16 @@
 import React from 'react'
 import { useHistory, useParams, useLocation } from 'react-router-dom'
-import './MainContentFocusedColor.css'
-import ColorSwatchLargeCard from './ColorSwatchLargeCard'
+import ColorSwatchCardDetailed from './ColorSwatchCardDetailed'
 
 export default function MainContentFocusedColor() {
     const { id } = useParams()
     const history = useHistory()
-    console.log('id: ', id)
     // const { state: { colorObject }} = useLocation()
     // console.log('colorObject: ', colorObject)
 
     return (
         <div>
-            <ColorSwatchLargeCard hexCode={id}/>
+            <ColorSwatchCardDetailed hexCode={id}/>
 
             <button 
                 className='clear_btn' 

@@ -1,0 +1,40 @@
+.card {
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 7px;
+    box-shadow: 0 0 5px lightgray;
+}
+
+.card-small {
+    height: 150px;
+}
+
+.card_color {
+    width: 100%;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.card_color-small {
+    height: 110px;
+}
+
+.card_color-large {
+    height: 60vh;
+}
+
+.card_label {
+    padding: 10px 15px 10px;
+}
+
+@media screen and (max-width: 680px) {
+    .card_color-large {
+        height: 45vh;
+    }
+}
+
+/* @media screen and (max-width: 480px) {
+    .card_color-large {
+        height: 45vh;
+    }
+} */

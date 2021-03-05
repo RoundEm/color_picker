@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-items: center;
-    gap: 15px 50px;
+    gap: 15px 40px;
 }
 
 @media screen and (max-width: 769px) {

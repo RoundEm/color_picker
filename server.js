@@ -16,6 +16,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // return color groups
+// NOTE: works but not currently being used:
 app.get('/color_groups', (req, res) => {
     const queryString = `SELECT * FROM color_groups`
     pool.query(queryString)
@@ -29,12 +30,14 @@ app.get('/color_groups', (req, res) => {
 })
 
 // return colors by color group
+// NOTE: works but not currently being used:
 app.get('/color_group/:id', (req, res) => {
+    // TODO: if you activate this again decide if you want to query by group id or name
     const queryString = `
         SELECT c.id, c.hex_code, cg.name FROM colors as c
         JOIN color_groups as cg
         ON c.color_group_id = cg.id
-        WHERE cg.name = $1;
+        WHERE cg.name = $1
     `
     pool.query(queryString, [req.params.id])
         .then(_res => {
@@ -50,7 +53,6 @@ app.get('/color_group/:id', (req, res) => {
 app.get('/colors', (req, res) => {
     const queryString = `SELECT * FROM colors`
     pool.query(queryString)
-        // TODO: sort by `id` so that all color groups are together
         .then(_res => {
             // console.log('colors res: ', _res)
             res.json(_res.rows)
@@ -61,6 +63,7 @@ app.get('/colors', (req, res) => {
 })
 
 // return one color by id
+// NOTE: works but not currently being used:
 app.get('/color/:id', (req, res) => {
     const queryString = `
         SELECT * FROM colors

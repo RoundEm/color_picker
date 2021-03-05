@@ -1,20 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './ColorSwatchListCard.css'
+import './ColorSwatchCard.css'
 
-export default function ColorSwatchListCard({ hexCode, id }) {
+export default function ColorSwatchCardList({ hexCode, id }) {
     return (
         <Link 
             to={`/color/${hexCode}`}
-            className='card' 
+            className='card card-small' 
         >
             <div>
                 <div 
-                    className='card_color' 
+                    className='card_color card_color-small ' 
                     style={{ background: `#${hexCode}` }}
                 >
                 </div>
                 
+                {/* TODO: This leaves lots of blank space above it when there are less than 16 grid items. Change grid setup? */}
                 <div className='card_label'>
                     #{hexCode}
                 </div>

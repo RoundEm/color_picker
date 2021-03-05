@@ -4,12 +4,11 @@ import axios from 'axios'
 import Router from './components/Router'
 import Header from './components/Header'
 import ContentGrid from './components/LayoutGrid'
-import SidebarNav from './components/SidebarNav'
+import ColorGroupNav from './components/ColorGroupNav'
 
 const PaginationContext = React.createContext({})
 
 function App() {
-  // TODO: use fetch instead? Either way change IDs of colors to be same order as mockup (e.g. red, orange, yello, etc.)
   const [colorGroups, setColorGroups] = useState([
     { name: 'red', id: 1 },
     { name: 'orange', id: 2 },
@@ -25,12 +24,6 @@ function App() {
   const [totalPages, setTotalPages] = useState(null)
   const [currentPage, setCurrentPage] = useState(0)
   const itemsPerPage = 16
-  // TODO: should i be using react router here instead of window.location below?
-  // const { pathname } = useLocation()
-  // console.log('pathname: ', pathname)
-  // console.log('allColors: ', allColors)
-  // console.log('paginatedColors from App: ', paginatedColors)
-  // console.log('totalPages: ', totalPages)
 
   // TODO: I'm just using hard-coded array to set color groups but should I fetch them instead? If so this should work:
   // useEffect(() => {
@@ -49,6 +42,7 @@ function App() {
       .then((res) => {
         console.log('get colors res: ', res)
         setAllColors(res.data)
+        // TODO: remove and figure out what was going awry here
         // setTotalPages(Math.ceil(res.data.length / itemsPerPage))
         // setPaginatedColors(res.data.slice(
         //   currentPage, 
@@ -83,7 +77,7 @@ function App() {
         <BrowserRouter>
           <Header />
           <ContentGrid>
-            <SidebarNav 
+            <ColorGroupNav 
               allColors={allColors}
               colorGroups={colorGroups} 
             />

@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
 import { PaginationContext } from '../App'
 import './MainContent.css'
 import ColorSwatchGrid from './ColorSwatchGrid'
-import ColorSwatchListCard from './ColorSwatchListCard'
+import ColorSwatchCardList from './ColorSwatchCardList'
 
+// TODO: how to get updated page colors to show when user manually adds page number to URL
+// TODO: scrollToTop when new page is selected
 export default function MainContentAllColors() {
-    // console.log('allColors: ', allColors)
     const { pathname } = useLocation()
     const pageNumber = pathname.slice(1)
-    console.log('pageNumber: ', pageNumber)
 
     const {
         allColors,
@@ -19,7 +19,7 @@ export default function MainContentAllColors() {
     } = useContext(PaginationContext)
 
     useEffect(() => {
-        console.log('-----useEffect-----')
+        // console.log('-----useEffect-----')
         const allColorsCopy = [...allColors]
         let startIndex
         let endIndex
@@ -30,8 +30,8 @@ export default function MainContentAllColors() {
             startIndex = (pageNumber - 1) * itemsPerPage
             endIndex = startIndex + itemsPerPage
         }
-        console.log('startIndex: ', startIndex)
-        console.log('endIndex: ', endIndex)
+        // console.log('startIndex: ', startIndex)
+        // console.log('endIndex: ', endIndex)
 
         setPaginatedColors(
             allColorsCopy.slice(
@@ -41,12 +41,11 @@ export default function MainContentAllColors() {
         )
     }, [pageNumber])
     
-
     return (
         <ColorSwatchGrid>
             {paginatedColors.map(({ id, hex_code }) => {
                 return (
-                    <ColorSwatchListCard 
+                    <ColorSwatchCardList 
                         key={id}
                         id={id}
                         hexCode={hex_code}

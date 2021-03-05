@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-// import { PaginationContext } from '../App'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './Pagination.css'
 

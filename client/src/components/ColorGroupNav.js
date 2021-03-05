@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import './SidebarNav.css'
+import './ColorGroupNav.css'
 
-export default function SidebarNav({ allColors, colorGroups }) {
+export default function ColorGroupNav({ allColors, colorGroups }) {
     const history = useHistory()
 
     function handleGetRandomColor() {
         const randomIndex = Math.floor(Math.random() * allColors.length)
         const color = allColors[randomIndex]
-        history.push(`/color/${color.hex_code}`, { colorObject: color })
+        history.push(
+            `/color/${color.hex_code}`, 
+            { colorObject: color }
+        )
     }
 
     return (
@@ -17,7 +20,7 @@ export default function SidebarNav({ allColors, colorGroups }) {
                 Random Color
             </button>
 
-            <ul id='sidebar_ul'>
+            <ul>
                 {colorGroups.map(({ id, name }) => {
                     return (
                         <li key={id}>
