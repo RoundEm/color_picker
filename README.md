@@ -1,11 +1,15 @@
 # Simple Color Picker
 This is a full stack app that displays a collection of colors from different color groups along with the corresponding hexadecimal color code. You can paginate through a random sorting of colors, generate and dispay a random color, filter by color group, and select specific colors to view it in more detail. 
 
-## Tools Used
+## Installation
+`npm run install` from root folder will install all packages for both server and client. Start app with `npm start`.
+
+## Technologies Used
 - React
 - React Router
 - PostgreSQL
 - Express
+- CSS
 
 ## TODOs and Future Development
 - [ ] Highlight what page is currently being viewed in the color group and all color pagination (maybe also disable click for pagination number of current page)
